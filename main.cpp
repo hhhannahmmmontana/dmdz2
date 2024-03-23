@@ -533,7 +533,11 @@ void Thirteenth(std::map<std::string, std::set<Path>>& graph) {
     std::string ans;
     auto first = tree.begin()->first;
     MakeCode(first, "", tree, ans, visited);
-    std::cout << "Тринадцатое\n\t" << ans << '\n';
+    std::cout << "Тринадцатое:\n\tКод:\t" << ans << "\n\n\tМассив:\t";
+    for (const auto& i : tree) {
+        std::cout << i.first << ", ";
+    }
+    std::cout << '\n';
 }
 
 int main() {
